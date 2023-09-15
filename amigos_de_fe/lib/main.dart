@@ -1,4 +1,6 @@
 import 'package:amigos_de_fe/provider/users.dart';
+import 'package:amigos_de_fe/routes/app_routes.dart';
+import 'package:amigos_de_fe/view/user_form.dart';
 import 'package:amigos_de_fe/view/user_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +26,10 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: const UserList(),
+        routes: {
+          AppRoutes.HOME: (ctx) => const UserList(),
+          AppRoutes.USER_FORM: (ctx) => const UserForm()
+        },
       ),
     );
   }

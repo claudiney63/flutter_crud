@@ -1,6 +1,7 @@
 import 'package:amigos_de_fe/components/user_tile.dart';
 import 'package:amigos_de_fe/models/user.dart';
 import 'package:amigos_de_fe/provider/users.dart';
+import 'package:amigos_de_fe/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,9 @@ class UserList extends StatelessWidget {
         title: const Text('Lista de Usuarios'),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.USER_FORM);
+              },
               icon: const Icon(Icons.add))
         ],
       ),
