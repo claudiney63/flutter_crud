@@ -1,4 +1,5 @@
 import 'package:amigos_de_fe/components/user_tile.dart';
+import 'package:amigos_de_fe/models/user.dart';
 import 'package:amigos_de_fe/provider/users.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,11 +15,13 @@ class UserList extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Lista de Usuarios'),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.add))
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.add))
         ],
       ),
       body: ListView.builder(
-        itemBuilder: (ctx, i) => UserTile(user: users.all.elementAt(i)),
+        itemBuilder: (ctx, i) => UserTile(user: users.byIndex(i)),
         itemCount: users.count,
       ),
     );
