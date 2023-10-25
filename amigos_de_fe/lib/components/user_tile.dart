@@ -1,6 +1,8 @@
 import 'package:amigos_de_fe/models/user.dart';
+import 'package:amigos_de_fe/provider/users.dart';
 import 'package:amigos_de_fe/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class UserTile extends StatelessWidget {
   const UserTile({Key? key, required this.user}) : super(key: key);
@@ -34,7 +36,28 @@ class UserTile extends StatelessWidget {
               color: Colors.orange,
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    title: const Text('Exlcuir Usuario'),
+                    content: const Text('Tem certeza?'),
+                    actions: [
+                      TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Não')),
+                      TextButton(
+                          onPressed: () {
+                            Provider.of<Users>(context, listen: false).remove(user);
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('Sim')),
+                    ],
+                  ),
+                );
+              },
               icon: const Icon(
                 Icons.delete,
               ),
