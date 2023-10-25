@@ -1,4 +1,5 @@
 import 'package:amigos_de_fe/models/user.dart';
+import 'package:amigos_de_fe/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class UserTile extends StatelessWidget {
@@ -20,8 +21,25 @@ class UserTile extends StatelessWidget {
         width: 100,
         child: Row(
           children: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.edit), color: Colors.orange),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.delete), color: Colors.red)
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(
+                  AppRoutes.USER_FORM,
+                  arguments: user,
+                );
+              },
+              icon: const Icon(
+                Icons.edit,
+              ),
+              color: Colors.orange,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.delete,
+              ),
+              color: Colors.red,
+            )
           ],
         ),
       ),
