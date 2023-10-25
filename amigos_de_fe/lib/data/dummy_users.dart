@@ -1,4 +1,4 @@
-import 'package:amigos_de_fe/models/user.dart';
+import 'package:flutter_crud/models/user.dart';
 
 const dummyUsers = {
   '1': User(

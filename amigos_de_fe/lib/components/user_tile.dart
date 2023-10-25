@@ -1,6 +1,6 @@
-import 'package:amigos_de_fe/models/user.dart';
-import 'package:amigos_de_fe/provider/users.dart';
-import 'package:amigos_de_fe/routes/app_routes.dart';
+import 'package:flutter_crud/models/user.dart';
+import 'package:flutter_crud/provider/users.dart';
+import 'package:flutter_crud/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

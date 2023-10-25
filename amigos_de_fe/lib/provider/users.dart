@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:amigos_de_fe/data/dummy_users.dart';
-import 'package:amigos_de_fe/models/user.dart';
+import 'package:flutter_crud/data/dummy_users.dart';
+import 'package:flutter_crud/models/user.dart';
 import 'package:flutter/material.dart';
 
 class Users with ChangeNotifier {

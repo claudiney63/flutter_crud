@@ -1,7 +1,7 @@
-import 'package:amigos_de_fe/provider/users.dart';
-import 'package:amigos_de_fe/routes/app_routes.dart';
-import 'package:amigos_de_fe/view/user_form.dart';
-import 'package:amigos_de_fe/view/user_list.dart';
+import 'package:flutter_crud/provider/users.dart';
+import 'package:flutter_crud/routes/app_routes.dart';
+import 'package:flutter_crud/view/user_form.dart';
+import 'package:flutter_crud/view/user_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
