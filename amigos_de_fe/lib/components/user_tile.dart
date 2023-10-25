@@ -45,17 +45,22 @@ class UserTile extends StatelessWidget {
                     actions: [
                       TextButton(
                           onPressed: () {
-                            Navigator.of(context).pop();
+                            Navigator.of(context).pop(false);
                           },
                           child: const Text('Não')),
                       TextButton(
                           onPressed: () {
-                            Provider.of<Users>(context, listen: false).remove(user);
-                            Navigator.of(context).pop();
+                            Navigator.of(context).pop(true);
                           },
                           child: const Text('Sim')),
                     ],
                   ),
+                ).then(
+                  (confirmed) {
+                    if (confirmed) {
+                      Provider.of<Users>(context, listen: false).remove(user);
+                    }
+                  },
                 );
               },
               icon: const Icon(
