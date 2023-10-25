@@ -1,5 +1,4 @@
 import 'package:amigos_de_fe/components/user_tile.dart';
-import 'package:amigos_de_fe/models/user.dart';
 import 'package:amigos_de_fe/provider/users.dart';
 import 'package:amigos_de_fe/routes/app_routes.dart';
 import 'package:flutter/material.dart';
